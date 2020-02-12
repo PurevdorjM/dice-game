@@ -18,12 +18,11 @@ document.getElementById("score-1").textContent = "0";
 document.getElementById("current-0").textContent = "0";
 document.getElementById("current-1").textContent = "0";
 
-document.querySelector(".dice").style.display = "none";
+var diceDom = document.querySelector(".dice");
+diceDom.style.display = "none";
 
 document.querySelector(".btn-roll").addEventListener("click", function() {
   var diceNumber = Math.floor(Math.random() * 6) + 1;
-  document.querySelector(".dice").style.display = "block";
-  document.querySelector(".dice").style.display = "block";
-
-  alert("Шоог шидлээ: " + diceNumber);
+  diceDom.style.display = "block";
+  diceDom.src = "dice-" + diceNumber + ".png";
 });
