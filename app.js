@@ -2,7 +2,7 @@
 var activePlayer = 0;
 
 // Тоглочдын чуглуулсан оноог цуглуулдаг хувьсагч
-var scores = [0, 0];
+var scores = [0, 1];
 
 // Тоглогчийн ээлжиндээ цуглуулж байгаа оноо
 var roundScore = 0;
@@ -39,7 +39,6 @@ document.querySelector(".btn-roll").addEventListener("click", function() {
     document.getElementById("current-" + activePlayer).textContent = roundScore;
   } else {
     // 1 буусан тул тоглогчийн ээлжийг сольж өгнө.
-
     // Энэ тоглогчийн ээлжиндээ  цуглуулсан оноог 0 болгоно.
     roundScore = 0;
     document.getElementById("current-" + activePlayer).textContent = 0;
@@ -56,11 +55,26 @@ document.querySelector(".btn-roll").addEventListener("click", function() {
 
     // Шоог түр алга болгоно.
     diceDom.style.display = "none";
-
-    // if (activePlayer === 0) {
-    //   activePlayer = 1;
-    // } else {
-    //   activePlayer = 0;
-    // }
   }
+});
+
+// HOLD товчны эвент листенер
+document.querySelector(".btn-hold").addEventListener("click", function() {
+  // Уг тоглогч нь цуглуулсан ээлжний оноог глобал оноон дээр нь нэмж өгнө.
+  // if (activePlayer === 0) {
+  //   scores[0] = scores[0] + roundScore;
+  // } else {
+  //   scores[1] = scores[1] + roundScore;
+  // }
+
+  scores[activePlayer] = scores[activePlayer] + roundScore;
+
+  // Дэлгэц дээрх оноог нв өөрчлөнө.
+  document.getElementById("score-" + activePlayer).textContent =
+    scores[activePlayer];
+
+  // Ээлжийн оноог нь 0 болгоно.
+  roundScore = 0;
+  document.getElementById;
+  // Тоглогчийн ээлжийг солино.
 });
