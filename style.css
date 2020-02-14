@@ -52,6 +52,7 @@ body {
 **********************************************/
 
 .player-name {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 40px;
   text-align: center;
   text-transform: uppercase;
@@ -96,6 +97,7 @@ body {
 }
 
 .player-current-label {
+  font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   margin-bottom: 10px;
   font-size: 12px;
@@ -114,7 +116,7 @@ button {
   color: #555;
   background: none;
   border: none;
-  font-family: Lato;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   text-transform: uppercase;
   cursor: pointer;

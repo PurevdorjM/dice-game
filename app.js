@@ -38,8 +38,8 @@ function initGame() {
   document.getElementById("current-1").textContent = "0";
 
   // Тоглогчдийн нэрийш буцааж гаргах
-  document.getElementById("name-0").textContent = "Player 1";
-  document.getElementById("name-1").textContent = "Player 2";
+  document.getElementById("name-0").textContent = "Тоглогч 1";
+  document.getElementById("name-1").textContent = "Тоглогч 2";
 
   document.querySelector(".player-0-panel").classList.remove("winner");
   document.querySelector(".player-1-panel").classList.remove("winner");
@@ -96,7 +96,8 @@ document.querySelector(".btn-hold").addEventListener("click", function() {
       isNewGame = false;
 
       // Ялагч гэсэн текстийг нэрийх нь оронд гаргана.
-      document.getElementById("name-" + activePlayer).textContent = "WINNER!!!";
+      document.getElementById("name-" + activePlayer).textContent =
+        "ЯЛАГЧ БОЛЛОО !!!";
       document
         .querySelector(".player-" + activePlayer + "-panel")
         .classList.add("winner");
